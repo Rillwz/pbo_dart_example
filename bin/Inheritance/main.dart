@@ -4,11 +4,11 @@ import 'monster_ubu_ubur.dart';
 import 'monster_kecoak.dart';
 
 dynamic main(List<String> arguments) async {
-  Hero h = Hero();
+  var h = Hero();
   Monster monster = MonsterUburUbur();
-  MonsterUburUbur u = MonsterUburUbur();
+  var u = MonsterUburUbur();
 
-  List<Monster> monsters = [];
+  var monsters = <Monster>[];
 
   monsters.add(MonsterUburUbur());
   monsters.add(MonsterKecoak());
@@ -16,7 +16,7 @@ dynamic main(List<String> arguments) async {
 
   print((monster as MonsterUburUbur).swim());
 
-  for (Monster m in monsters) {
+  for (var m in monsters) {
     if (m is MonsterUburUbur) {
       print(m.eatHuman());
     }
