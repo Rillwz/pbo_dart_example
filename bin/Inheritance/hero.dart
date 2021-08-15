@@ -1,12 +1,6 @@
-class Hero {
-  late int _hp;
+import 'character.dart';
 
-  // ignore: unnecessary_getters_setters
-  int get hp => _hp;
-
-  // ignore: unnecessary_getters_setters
-  set hp(int value) => _hp = value;
-
+class Hero extends Character {
   String hitMonster() {
     return 'Take this..!';
   }
