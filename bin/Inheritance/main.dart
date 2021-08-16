@@ -1,5 +1,7 @@
+import 'drink_ability_mixin.dart';
 import 'flying_monster.dart';
 import 'hero.dart';
+import 'knight.dart';
 import 'monster.dart';
 import 'monster_ubu_ubur.dart';
 import 'monster_kecoak.dart';
@@ -7,26 +9,20 @@ import 'monster_uburcoak.dart';
 
 dynamic main(List<String> arguments) async {
   var h = Hero();
-  Monster monster = MonsterUburUbur();
   var u = MonsterUburUbur();
 
   var monsters = <Monster>[];
 
-  monsters.add(MonsterUburUbur());
-  monsters.add(MonsterKecoak());
-  monsters.add(monsterUburCoak());
+  Knight k = Knight();
+  print(k.drink() + 'is hero');
 
-  for (var m in monsters) {
-    if (m is FlyingMonster) {
-      print((m as FlyingMonster).fly());
-    }
-  }
-
-  // print((monster as MonsterUburUbur).swim());
-
+  // monsters.add(MonsterUburUbur());
+  // monsters.add(MonsterKecoak());
+  // monsters.add(monsterUburCoak());
+  //
   // for (var m in monsters) {
-  //   if (m is MonsterUburUbur) {
-  //     print(m.move());
+  //   if (m is DrinkAbility) {
+  //     print((m as DrinkAbility).drink());
   //   }
   // }
 
