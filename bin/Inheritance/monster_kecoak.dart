@@ -1,5 +1,8 @@
 import 'monster.dart';
 
 class MonsterKecoak extends Monster {
-  String fly() => 'terbang';
+  @override
+  String move() {
+    return 'jalan-jalan';
+  }
 }

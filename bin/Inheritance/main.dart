@@ -14,13 +14,17 @@ dynamic main(List<String> arguments) async {
   monsters.add(MonsterKecoak());
   monsters.add(MonsterUburUbur());
 
-  print((monster as MonsterUburUbur).swim());
-
   for (var m in monsters) {
-    if (m is MonsterUburUbur) {
-      print(m.eatHuman());
-    }
+    print(m.move());
   }
+
+  // print((monster as MonsterUburUbur).swim());
+
+  // for (var m in monsters) {
+  //   if (m is MonsterUburUbur) {
+  //     print(m.move());
+  //   }
+  // }
 
   h.hp = 10;
   u.hp = 3;
