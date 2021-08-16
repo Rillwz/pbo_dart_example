@@ -1,7 +1,9 @@
+import 'flying_monster.dart';
 import 'hero.dart';
 import 'monster.dart';
 import 'monster_ubu_ubur.dart';
 import 'monster_kecoak.dart';
+import 'monster_uburcoak.dart';
 
 dynamic main(List<String> arguments) async {
   var h = Hero();
@@ -12,10 +14,12 @@ dynamic main(List<String> arguments) async {
 
   monsters.add(MonsterUburUbur());
   monsters.add(MonsterKecoak());
-  monsters.add(MonsterUburUbur());
+  monsters.add(monsterUburCoak());
 
   for (var m in monsters) {
-    print(m.move());
+    if (m is FlyingMonster) {
+      print((m as FlyingMonster).fly());
+    }
   }
 
   // print((monster as MonsterUburUbur).swim());
